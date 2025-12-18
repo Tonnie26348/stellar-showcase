@@ -41,48 +41,7 @@ const Index = () => {
         </div>
 
         <div className="container-custom relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-            {/* Profile Photo Section */}
-            <div className="flex flex-col items-center gap-4 animate-fade-up">
-              <div className="w-48 h-48 md:w-56 md:h-56 rounded-full border-4 border-primary/30 bg-card/50 backdrop-blur-sm flex items-center justify-center overflow-hidden shadow-lg">
-                {profilePhoto ? (
-                  <img 
-                    src={profilePhoto} 
-                    alt="Profile" 
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <User className="w-24 h-24 text-muted-foreground/50" />
-                )}
-              </div>
-              <input
-                ref={fileInputRef}
-                type="file"
-                accept="image/*"
-                onChange={handleFileChange}
-                className="hidden"
-              />
-              <div className="flex gap-2">
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  onClick={handleUploadClick}
-                  className="gap-2"
-                >
-                  <Upload className="w-4 h-4" />
-                  Upload
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  onClick={handleDeletePhoto}
-                  className="gap-2 text-destructive hover:text-destructive"
-                >
-                  <Trash2 className="w-4 h-4" />
-                  Delete
-                </Button>
-              </div>
-            </div>
+          <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
 
             {/* Text Content */}
             <div className="max-w-4xl text-center lg:text-left">
@@ -132,6 +91,48 @@ const Index = () => {
                   <p className="font-serif text-4xl md:text-5xl font-bold text-gradient">MBA</p>
                   <p className="text-muted-foreground mt-2">In Finance</p>
                 </div>
+              </div>
+            </div>
+
+            {/* Profile Photo Section */}
+            <div className="flex flex-col items-center gap-4 animate-fade-up flex-shrink-0">
+              <div className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full border-4 border-primary/30 bg-card/50 backdrop-blur-sm flex items-center justify-center overflow-hidden shadow-lg">
+                {profilePhoto ? (
+                  <img 
+                    src={profilePhoto} 
+                    alt="Profile" 
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <User className="w-24 h-24 text-muted-foreground/50" />
+                )}
+              </div>
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="image/*"
+                onChange={handleFileChange}
+                className="hidden"
+              />
+              <div className="flex gap-2">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  onClick={handleUploadClick}
+                  className="gap-2"
+                >
+                  <Upload className="w-4 h-4" />
+                  Upload
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  onClick={handleDeletePhoto}
+                  className="gap-2 text-destructive hover:text-destructive"
+                >
+                  <Trash2 className="w-4 h-4" />
+                  Delete
+                </Button>
               </div>
             </div>
           </div>
