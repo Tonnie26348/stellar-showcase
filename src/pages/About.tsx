@@ -1,4 +1,4 @@
-import { Target, Award, BookOpen, TrendingUp } from "lucide-react";
+import { Target, BookOpen, TrendingUp } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const About = () => {
@@ -38,18 +38,27 @@ const About = () => {
             {[
               {
                 degree: "MBA in Finance",
-                institution: "University",
+                institution: "United States International University – Africa",
+                period: "January 2019 - September 2022",
                 description: "Advanced studies in financial management, corporate finance, and strategic planning.",
               },
               {
-                degree: "CPA Finalist",
-                institution: "Kenya",
+                degree: "CPA K - Certificate in Professional Accounting",
+                institution: "KCA University",
+                period: "January 2016 - December 2018",
                 description: "Comprehensive professional accounting certification covering taxation, auditing, and financial reporting.",
               },
               {
-                degree: "Bachelor's Degree",
-                institution: "Accounting & Business Administration",
+                degree: "Bachelor International Business Administration (Accounting)",
+                institution: "United States International University – Africa",
+                period: "May 2014 - September 2018",
                 description: "Solid foundation in accounting principles, business law, and financial analysis.",
+              },
+              {
+                degree: "Kenya Certificate of Secondary Education",
+                institution: "Ntunene Girls' Secondary School",
+                period: "January 2010 - November 2013",
+                description: "Secondary education with strong foundation in academics.",
               },
             ].map((edu, index) => (
               <div
@@ -59,7 +68,8 @@ const About = () => {
                 <h3 className="font-serif text-xl font-semibold text-foreground mb-2">
                   {edu.degree}
                 </h3>
-                <p className="text-primary font-medium mb-3">{edu.institution}</p>
+                <p className="text-primary font-medium mb-1">{edu.institution}</p>
+                <p className="text-muted-foreground text-sm mb-3">{edu.period}</p>
                 <p className="text-muted-foreground">{edu.description}</p>
               </div>
             ))}
@@ -75,13 +85,8 @@ const About = () => {
             <h2 className="font-serif text-3xl font-bold">Career Goals</h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {[
-              {
-                icon: Award,
-                title: "CPA License",
-                description: "Complete my CPA certification to enhance professional credibility and expertise.",
-              },
               {
                 icon: TrendingUp,
                 title: "Senior Role",

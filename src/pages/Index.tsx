@@ -48,18 +48,18 @@ const Index = () => {
               <div className="flex items-center gap-2 mb-6 animate-fade-up justify-center lg:justify-start">
                 <Sparkles className="h-5 w-5 text-primary" />
                 <span className="text-primary font-medium text-sm tracking-wide uppercase">
-                  Finance Professional
+                  Accountant & Finance Professional
                 </span>
               </div>
 
               <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-up delay-100">
                 <span className="text-foreground">Hello, I'm</span>
                 <br />
-                <span className="text-gradient">Mercy Mutea</span>
+                <span className="text-gradient">Mercy Syokau Mutea</span>
               </h1>
 
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl leading-relaxed animate-fade-up delay-200">
-                A focused <span className="text-foreground font-medium">Accountant</span> with 4+ years of diverse experience in bookkeeping and financial operations. MBA in Finance graduate and CPA finalist.
+                A focused <span className="text-foreground font-medium">Accountant & Finance Professional</span> with 4+ years of diverse experience in bookkeeping and financial operations. MBA in Finance graduate and CPA finalist.
               </p>
 
               <div className="flex flex-wrap gap-4 animate-fade-up delay-300 justify-center lg:justify-start">
