@@ -70,7 +70,7 @@ const Index = () => {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <a href="/Mercy_Mutea_CV.pdf" target="_blank" rel="noopener noreferrer">
+                  <a href="/Mercy_Mutea_CV.pdf" download="Mercy_Mutea_CV.pdf">
                     <Download className="mr-2 h-4 w-4" />
                     Download CV
                   </a>
