@@ -22,9 +22,10 @@ const softSkills = [
 ];
 
 const certifications = [
-  "CPA Finalist - Kenya",
-  "MBA in Finance",
-  "Bachelor's in Accounting & Business Administration",
+  { title: "CPA K", institution: "KCA University", period: "2016-2018" },
+  { title: "MBA in Finance", institution: "United States International University – Africa", period: "2019-2022" },
+  { title: "Bachelor International Business Administration (Accounting)", institution: "United States International University – Africa", period: "2014-2018" },
+  { title: "KCSE", institution: "Ntunene Girls' Secondary School", period: "2010-2013" },
 ];
 
 const Skills = () => {
@@ -107,18 +108,24 @@ const Skills = () => {
             <h2 className="font-serif text-3xl font-bold">Certifications & Education</h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {certifications.map((cert, index) => (
               <div
-                key={cert}
-                className={`card-glass rounded-xl p-8 text-center hover-lift animate-fade-up delay-${index * 100}`}
+                key={cert.title}
+                className={`card-glass rounded-xl p-8 hover-lift animate-fade-up delay-${index * 100}`}
               >
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-gold-light" />
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary to-gold-light" />
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-lg font-semibold text-foreground mb-1">
+                      {cert.title}
+                    </h3>
+                    <p className="text-muted-foreground">{cert.institution}</p>
+                    <p className="text-sm text-primary mt-1">{cert.period}</p>
+                  </div>
                 </div>
-                <h3 className="font-serif text-lg font-semibold text-foreground">
-                  {cert}
-                </h3>
               </div>
             ))}
           </div>
